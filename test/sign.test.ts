@@ -18,7 +18,7 @@ const ring = [
     secp256k1,
     [
       BigInt(26978617571988867303429540461406656496036492562554075931365823092839011889373),
-        BigInt(50038004826647663184375237364755049221543971914508636411038605315417494040790)
+      BigInt(50038004826647663184375237364755049221543971914508636411038605315417494040790)
     ]
   ),
 ]
@@ -37,7 +37,8 @@ const body: SignPayload = {
 }
 
 //fetch to localhost:3000
-fetch("http://localhost:3000/api/sign/", {
+// fetch("http://localhost:3000/api/sign/", {
+fetch("http://176.146.201.74:3000/api/sign/", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",

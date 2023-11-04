@@ -14,6 +14,7 @@ export interface SignPayload {
 
 // POST route to check balances
 router.post('/', async (req: Request, res: Response) => {
+  try{
   const payload: SignPayload = req.body;
 
   // sign
@@ -40,6 +41,10 @@ router.post('/', async (req: Request, res: Response) => {
   res.json(out);
   console.log(" -------------RETURNED DATA------------- ");
   console.log(out);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
 export default router;
