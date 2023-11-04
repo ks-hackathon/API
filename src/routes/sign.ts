@@ -30,12 +30,16 @@ router.post('/', async (req: Request, res: Response) => {
     curve,
     config
   );
-    console.log(signature.responses);
-  res.json({
+
+  const out = {
     message: keccak256(payload.message),
     c: signature.c.toString(),
     responses: signature.responses.map((response) => response.toString()),
-  });
+  };
+
+  res.json(out);
+  console.log(" -------------RETURNED DATA------------- ");
+  console.log(out);
 });
 
 export default router;
