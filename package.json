@@ -13,6 +13,7 @@
     "@cypherlab/types-ring-signature": "git+https://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:x-oauth-basic@github.com/Cypher-Laboratory/types-Ring-Signature.git",
     "@types/express": "^4.17.20",
     "axios": "^1.6.0",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "ts-node": "^10.9.1"
   }
